@@ -1035,7 +1035,7 @@ begin
   i := Ini.ReadInteger('NetWork', 'ConnectTimeout', 0);
   if (i < 0) or (i > 999) then i:= 0; // default
   Ini.WriteInteger('NetWork', 'ConnectTimeout', i);
-  Http.FSock.ConnectionTimeout := i * 1000;
+  Http.Sock.ConnectionTimeout := i * 1000;
 
   Http.Headers.NameValueSeparator:=':';
 end;
